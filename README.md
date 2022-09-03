@@ -40,7 +40,7 @@ haqqd keys add YOURWALLETNAME
 
 **Add genesis account**
 ```bash
-haqqd add-genesis-account YOURWALLETNAME 10000000aISLM
+haqqd add-genesis-account YOURWALLETNAME 10000000000000000000aISLM
 ```
 
 **Create gentx**
