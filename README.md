@@ -40,12 +40,12 @@ haqqd keys add YOURWALLETNAME
 
 **Add genesis account**
 ```bash
-haqqd add-genesis-account YOURWALLETNAME 10000000aISLM
+haqqd add-genesis-account YOURWALLETNAME 10000000000000000000aISLM
 ```
 
 **Create gentx**
 ```bash
-haqqd gentx YOURWALLETNAME 10000000aISLM \
+haqqd gentx YOURWALLETNAME 10000000000000000000aISLM \
 --chain-id=haqq_54211-2 \
 --moniker="YOURMONIKERNAME" \
 --commission-max-change-rate 0.05 \
