@@ -14,7 +14,7 @@ class GentxChecker {
     }
 
     isHealthyAmount() {
-        return parseInt(this._validator_data.value.amount) / 10000000 === 1.0;
+        return parseInt(this._validator_data.value.amount) / 10000000000000000000 === 1.0;
     }
 
     isHealthyDenom() {
