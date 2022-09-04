@@ -10,10 +10,10 @@ sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bs
 
 **Install Go 1.18.3**
 ```bash
-wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz; \
+wget https://go.dev/dl/go1.19.linux-amd64.tar.gz; \
 rm -rv /usr/local/go; \
-tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz && \
-rm -v go1.18.3.linux-amd64.tar.gz && \
+tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz && \
+rm -v go1.19.linux-amd64.tar.gz && \
 echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile && \
 source ~/.bash_profile && \
 go version > /dev/null
