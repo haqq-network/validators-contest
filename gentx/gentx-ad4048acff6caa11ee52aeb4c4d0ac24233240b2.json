@@ -1,0 +1,8 @@
+{"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"junesweet","identity":"junesweet1122#9998","website":"",
+"security_contact":"","details":""},"commission":{"rate":"0.050000000000000000","max_rate":"0.200000000000000000","max_change_rate":"0.050000000000000000"},"
+min_self_delegation":"1","delegator_address":"haqq1as822lfqnw3j9g7yuqy6ut97egv33kuznun5el","validator_address":"haqqvaloper1as822lfqnw3j9g7yuqy6ut97egv33kuzl
+7l6a7","pubkey":{"@type":"/cosmos.crypto.ed25519.PubKey","key":"IoxotTqk/VB5xX22VJRgxOl1o8yVjxH411eXbHEEr7U="},"value":{"denom":"aISLM","amount":"10000000000
+000000000"}}],"memo":"ad4048acff6caa11ee52aeb4c4d0ac24233240b2@38.242.137.239:26656","timeout_height":"0","extension_options":[],"non_critical_extension_opti
+ons":[]},"auth_info":{"signer_infos":[{"public_key":{"@type":"/ethermint.crypto.v1.ethsecp256k1.PubKey","key":"ArNiNxc6sMNS59/wYrADKv2VcS04VDtiZFGzKGZZSZIS"}
+,"mode_info":{"single":{"mode":"SIGN_MODE_DIRECT"}},"sequence":"0"}],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":["2rVd8B+
+ryIM+F2Oza+7do/ijD/7MDApRyv1VacU514AkHMIm1T7v1CK2Vh3AYrvrdE8SQtnLxXDt7mXlwaEUPgA="]}
