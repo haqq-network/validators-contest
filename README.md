@@ -62,7 +62,10 @@ After executing this command, you have a gentx. Submit a pull request (gentx fol
 File Genesis transaction written to "/.haqqd/config/gentx/gentx-xxx.json"
 ```
 
-
+Be sure to save your priv_validator_key.json
+```bash
+/.haqqd/config/priv_validator_key.json
+```
 
 
 
