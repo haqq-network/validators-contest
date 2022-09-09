@@ -1,5 +1,5 @@
 ![haqq (1)](https://user-images.githubusercontent.com/104348282/188024190-b43f56d0-2dc6-4e4a-be0e-a7e9f615f751.png)
-# Prepare intensivized testnet Haqq
+# Prepare to launch intensivized testnet Haqq
 <h3>🟢 Instructions for those who do not transfer node to another server</h3>
 
 Remove old genesis and download genesis.json to your server in .haqqd folder
