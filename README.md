@@ -2,6 +2,15 @@
 # Prepare to launch intensivized testnet Haqq
 <h3>🟢 Instructions for those who do not transfer node to another server</h3>
 
+Update binary haqqd to v1.0.3
+```bash
+cd $HOME/haqq && \
+git fetch && \
+git checkout v1.0.3 && \
+make install && \
+haqqd version --long | head
+```
+
 Remove old genesis and download genesis.json to your server in .haqqd folder
 ```bash
 rm -rf $HOME/.haqqd/config/genesis.json && cd $HOME/.haqqd/config/ && wget https://raw.githubusercontent.com/haqq-network/validators-contest/master/genesis.json
@@ -78,7 +87,7 @@ cd $HOME && git clone https://github.com/haqq-network/haqq && \
 cd haqq && \
 git checkout v1.0.3 && \
 make install && \
-haqqd version
+haqqd version --long | head
 ```
 
 Also init your node
