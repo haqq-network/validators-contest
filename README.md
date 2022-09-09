@@ -1,4 +1,4 @@
-![haqq (1)](https://user-images.githubusercontent.com/104348282/188024190-b43f56d0-2dc6-4e4a-be0e-a7e9f615f751.png)
+![haqq](https://user-images.githubusercontent.com/94483941/189324668-2e070db6-f0b6-4ddc-bc7c-f613ec404279.png)
 # Prepare to launch intensivized testnet Haqq
 <h3>🟢 Instructions for those who do not transfer node to another server</h3>
 
