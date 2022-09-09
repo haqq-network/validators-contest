@@ -9,7 +9,14 @@ git fetch && \
 git checkout v1.0.3 && \
 make install && \
 haqqd version --long | head
+
+name: haqq
+server_name: haqqd
+version: '"1.0.3"'
+commit: 58215364d5be4c9ab2b17b2a80cf89f10f6de38a
+...
 ```
+
 
 Remove old genesis and download genesis.json to your server in .haqqd folder
 ```bash
@@ -88,6 +95,12 @@ cd haqq && \
 git checkout v1.0.3 && \
 make install && \
 haqqd version --long | head
+
+name: haqq
+server_name: haqqd
+version: '"1.0.3"'
+commit: 58215364d5be4c9ab2b17b2a80cf89f10f6de38a
+...
 ```
 
 Also init your node
