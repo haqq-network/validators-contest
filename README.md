@@ -6,6 +6,13 @@ Remove old genesis and download genesis.json to your server in .haqqd folder
 ```bash
 rm -rf $HOME/.haqqd/config/genesis.json && cd $HOME/.haqqd/config/ && wget https://raw.githubusercontent.com/haqq-network/validators-contest/master/genesis.json
 ```
+
+Check genesis.json
+```bash
+sha256sum $HOME/.haqqd/config/genesis.json
+8c79dda3c8f0b2b9c0f5e770136fd6044ea1a062c9272d17665cb31464a371f7
+```
+
 Create a service file
 ```bash
 sudo tee /etc/systemd/system/haqqd.service > /dev/null <<EOF
@@ -91,6 +98,13 @@ Remove old genesis.json and download genesis.json to your server in .haqqd folde
 ```bash
 rm -rf $HOME/.haqqd/config/genesis.json && cd $HOME/.haqqd/config/ && wget https://raw.githubusercontent.com/haqq-network/validators-contest/master/genesis.json
 ```
+
+Check genesis.json
+```bash
+sha256sum $HOME/.haqqd/config/genesis.json
+8c79dda3c8f0b2b9c0f5e770136fd6044ea1a062c9272d17665cb31464a371f7
+```
+
 Create a service file
 ```bash
 sudo tee /etc/systemd/system/haqqd.service > /dev/null <<EOF
