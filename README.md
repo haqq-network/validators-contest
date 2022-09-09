@@ -6,7 +6,7 @@ Update binary haqqd to v1.0.3
 ```bash
 cd $HOME/haqq && \
 git fetch && \
-git checkout -b v1.0.3 && \
+git checkout v1.0.3 && \
 make install && \
 haqqd version --long | head
 
