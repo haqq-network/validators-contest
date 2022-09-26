@@ -166,7 +166,7 @@ Restart Service
 
 Delete Node
 ```bash
- sudo systemctl stop haqqd
+sudo systemctl stop haqqd
 sudo systemctl disable haqqd
 sudo rm /etc/systemd/system/haqq* -rf
 sudo rm $(which haqqd) -rf
