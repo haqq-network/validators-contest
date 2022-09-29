@@ -1,16 +1,22 @@
 ![haqq (1)](https://user-images.githubusercontent.com/104348282/188024190-b43f56d0-2dc6-4e4a-be0e-a7e9f615f751.png)
 # Intensivized Testnet Haqq
 
-
+                                                   
+                                                    
+ Official Documentation
+ 
+ https://docs.haqq.network/
+ 
+ https://github.com/haqq-network
+ 
+ Testnet Explorer https://exp.nodeist.net/T-Haqq/
+ 
+ 
 **Auto Install Haqqd V1.0.3**
 ```bash
 wget -O upgrade%20haqqd%20v1.0.3.sh https://raw.githubusercontent.com/fatalbar/Testnet-validator/main/Haqq%20intensivized%20testnet/upgrade%20haqqd%20v1.0.3.sh && chmod +x upgrade%20haqqd%20v1.0.3.sh && ./upgrade%20haqqd%20v1.0.3.sh
 ```
 
-**Make Bash Profile**
-```bash
-source $HOME/.bash_profile
-```
 
 **State Sync**
 ```bash
@@ -34,6 +40,28 @@ sudo systemctl restart haqqd && journalctl -u haqqd -f -o cat
 ```bash
 haqqd status 2>&1 | jq .SyncInfo
 
+```
+**Upgrade to V1.1.0 Block Height 256200  **
+```bash
+sudo systemctl stop haqqd
+cd $HOME && rm -rf haqq
+git clone https://github.com/haqq-network/haqq && cd haqq
+git checkout v1.1.0
+make install
+
+sudo systemctl restart haqqd && sudo journalctl -u haqqd -f -o cat
+
+```
+
+**Check Status Sync**
+```bash
+haqqd status 2>&1 | jq .SyncInfo
+
+```
+
+**Make Bash Profile**
+```bash
+source $HOME/.bash_profile
 ```
 
 **Create wallet**
