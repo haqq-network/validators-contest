@@ -21,7 +21,8 @@ commit: 58215364d5be4c9ab2b17b2a80cf89f10f6de38a
 #Remove old genesis and download genesis.json to your server in .haqqd folder
 
 rm -rf $HOME/.haqqd/config/genesis.json && cd $HOME/.haqqd/config/ && wget https://raw.githubusercontent.com/haqq-network/validators-contest/master/genesis.json
-Check genesis.json
+
+#Check genesis.json
 
 sha256sum $HOME/.haqqd/config/genesis.json
 8c79dda3c8f0b2b9c0f5e770136fd6044ea1a062c9272d17665cb31464a371f7
