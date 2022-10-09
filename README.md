@@ -13,7 +13,7 @@ haqqd version --long | head
 name: haqq
 server_name: haqqd
 version: '"1.2.0"'
-commit: 40935b70fb1da4ee28f1d91e8601060e533f6fd0
+commit: 1ec9d93972e29cf89980d098f375790334faea1b
 ...
 ```
 
@@ -99,7 +99,7 @@ haqqd version --long | head
 name: haqq
 server_name: haqqd
 version: '"1.2.0"'
-commit: 40935b70fb1da4ee28f1d91e8601060e533f6fd0
+commit: 1ec9d93972e29cf89980d098f375790334faea1b
 ...
 ```
 
