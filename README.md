@@ -2,17 +2,17 @@
 # Prepare to launch intensivized testnet Haqq
 <h3>🟢 Instructions for those who do not transfer node to another server</h3>
 
-Update binary haqqd to v1.1.0
+Update binary haqqd to v1.2.0
 ```bash
 cd $HOME/haqq && \
 git fetch && \
-git checkout v1.1.0 && \
+git checkout v1.2.0 && \
 make install && \
 haqqd version --long | head
 
 name: haqq
 server_name: haqqd
-version: '"1.1.0"'
+version: '"1.2.0"'
 commit: 58215364d5be4c9ab2b17b2a80cf89f10f6de38a
 ...
 ```
@@ -98,7 +98,7 @@ haqqd version --long | head
 
 name: haqq
 server_name: haqqd
-version: '"1.1.0"'
+version: '"1.2.0"'
 commit: 58215364d5be4c9ab2b17b2a80cf89f10f6de38a
 ...
 ```
