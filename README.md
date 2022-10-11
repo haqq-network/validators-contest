@@ -92,13 +92,13 @@ Install binary project
 ```bash
 cd $HOME && git clone https://github.com/haqq-network/haqq && \
 cd haqq && \
-git checkout v1.0.3 && \
+git checkout v1.2.0 && \
 make install && \
 haqqd version --long | head
-
+//USE statesync
 name: haqq
 server_name: haqqd
-version: '"1.0.3"'
+version: '"1.2.0"'
 commit: 58215364d5be4c9ab2b17b2a80cf89f10f6de38a
 ...
 ```
