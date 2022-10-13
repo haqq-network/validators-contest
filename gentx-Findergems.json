@@ -1,0 +1,10 @@
+haqqd gentx wallet 10000000000000000000aISLM \
+--chain-id=haqq_54211-2 \
+--moniker="Findergems" \
+--commission-max-change-rate 0.05 \
+--commission-max-rate 0.20 \
+--commission-rate 0.05 \
+--website="https://t.me/airdrophunting11" \
+--security-contact="galerigilang123@gmail.com" \
+--identity="72F5D6334AB4F286" \
+--details="Let's discover new world"
