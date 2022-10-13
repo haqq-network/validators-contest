@@ -44,6 +44,6 @@ sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persisten
 
 Run the service file and see the logs of your node
 ```bash
-sudo systemctl start haqqd && \
+sudo systemctl restart haqqd && \
 sudo journalctl -u haqqd -f -o cat
 ```
