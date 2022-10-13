@@ -1,0 +1,61 @@
+{
+    "body": {
+      "messages": [
+        {
+          "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+          "description": {
+            "moniker": "jeffjack2402",
+            "identity": "",
+            "website": "",
+            "security_contact": "",
+            "details": ""
+          },
+          "commission": {
+            "rate": "0.050000000000000000",
+            "max_rate": "0.200000000000000000",
+            "max_change_rate": "0.050000000000000000"
+          },
+          "min_self_delegation": "1",
+          "delegator_address": "haqq1n6qmmuu7gkwcfyfx6dkwlzgpj25egvgvdswxy9",
+          "validator_address": "haqqvaloper1n6qmmuu7gkwcfyfx6dkwlzgpj25egvgvpjzgqy",
+          "pubkey": {
+            "@type": "/cosmos.crypto.ed25519.PubKey",
+            "key": "zep6zfzsv0J1nvoJJhdHX8PvzEBK33551hW1mD97RN4="
+          },
+          "value": {
+            "denom": "aISLM",
+            "amount": "10000000000000000000"
+          }
+        }
+      ],
+      "memo": "51f02003732f8ddf4ea609569d8841227726593b@185.252.235.89:26656",
+      "timeout_height": "0",
+      "extension_options": [],
+      "non_critical_extension_options": []
+    },
+    "auth_info": {
+      "signer_infos": [
+        {
+          "public_key": {
+            "@type": "/ethermint.crypto.v1.ethsecp256k1.PubKey",
+            "key": "AmlHXZ5B2ObT2v88AkR9+v+XsS32gfIeEi6PIrcU95Qj"
+          },
+          "mode_info": {
+            "single": {
+              "mode": "SIGN_MODE_DIRECT"
+            }
+          },
+          "sequence": "0"
+        }
+      ],
+      "fee": {
+        "amount": [],
+        "gas_limit": "200000",
+        "payer": "",
+        "granter": ""
+      }
+    },
+    "signatures": [
+      "m1ABq0W++05Es7y0cT1MUkHOLEhJP2k3Rn59YpmYHjw6VlLjefglj7cxTwHqOgscnZuVit4xS35cgVceA2zrtwA="
+    ]
+  }
