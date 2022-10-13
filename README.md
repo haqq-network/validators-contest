@@ -18,7 +18,7 @@ sha256sum $HOME/.haqqd/config/genesis.json
 ```
 sha256sum: b93f2650bdf560cab2cf7706ecee72bfba6d947fa57f8b1b8cb887f8b428233f
 
-<b>Disable state-sync in $HOME/config/config.toml.</b></br>
+<b>Disable state-sync in $HOME/.haqqd/config/config.toml.</b></br>
 <b>Change the enable parameter to false</b>
 ```bash
 [statesync]
