@@ -24,7 +24,7 @@ Execute unsafe-reset-all
 haqqd tendermint unsafe-reset-all --home=$HOME/.haqqd
 ```
 
-Set haqq_54211-3
+Set chain haqq_54211-3
 ```bash
 haqqd config chain-id haqq_54211-3
 ```
