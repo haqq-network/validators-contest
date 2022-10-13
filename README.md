@@ -24,6 +24,11 @@ Execute unsafe-reset-all
 haqqd tendermint unsafe-reset-all --home=$HOME/.haqqd
 ```
 
+Set haqq_54211-3
+```bash
+haqqd config chain-id haqq_54211-3
+```
+
 Insertion of seeds and peers
 ```bash
 seeds="62bf004201a90ce00df6f69390378c3d90f6dd7e@seed2.testedge2.haqq.network:26656,23a1176c9911eac442d6d1bf15f92eeabb3981d5@seed1.testedge2.haqq.network:26656"
