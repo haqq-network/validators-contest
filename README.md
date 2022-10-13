@@ -1,73 +1,49 @@
-![haqq (1)](https://user-images.githubusercontent.com/104348282/188024190-b43f56d0-2dc6-4e4a-be0e-a7e9f615f751.png)
-# Prepare intensivized testnet Haqq
-*Instructions on how to prepare for the testnet*
+![haqq](https://user-images.githubusercontent.com/94483941/189324668-2e070db6-f0b6-4ddc-bc7c-f613ec404279.png)
+<h3>🚨 Genesis update guide haqq_54211-3</h3>
+<i>For those who already have a node installed</i>
 
-**Update packages and install required packages**
+Stop node
 ```bash
-sudo apt update && sudo apt upgrade -y && \
-sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
+sudo systemctl stop haqqd
 ```
 
-**Install Go 1.18.3**
+Download new genesis
 ```bash
-wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz; \
-rm -rv /usr/local/go; \
-tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz && \
-rm -v go1.18.3.linux-amd64.tar.gz && \
-echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile && \
-source ~/.bash_profile && \
-go version > /dev/null
+cd $HOME/.haqqd/config && rm -rf genesis.json && wget https://github.com/haqq-network/validators-contest/raw/master/genesis.json
 ```
 
-**Install binary project**
+Check genesis.json
 ```bash
-cd $HOME && git clone https://github.com/haqq-network/haqq && \
-cd haqq && \
-make install && \
-haqqd version
+sha256sum $HOME/.haqqd/config/genesis.json
+```
+sha256sum: b93f2650bdf560cab2cf7706ecee72bfba6d947fa57f8b1b8cb887f8b428233f
+
+<b>Disable state-sync in $HOME/.haqqd/config/config.toml.</b></br>
+<b>Change the enable parameter to false</b>
+```bash
+[statesync]
+enable = false
 ```
 
-**Init moniker and set chainid**
+Execute unsafe-reset-all
 ```bash
-haqqd init YOURMONIKER --chain-id haqq_54211-2 && \
-haqqd config chain-id haqq_54211-2
+haqqd tendermint unsafe-reset-all --home=$HOME/.haqqd
 ```
 
-**Create wallet**
+Set chain haqq_54211-3
 ```bash
-haqqd keys add YOURWALLETNAME
+haqqd config chain-id haqq_54211-3
 ```
 
-**Add genesis account**
+Insertion of seeds and peers
 ```bash
-haqqd add-genesis-account YOURWALLETNAME 10000000000000000000aISLM
+seeds="62bf004201a90ce00df6f69390378c3d90f6dd7e@seed2.testedge2.haqq.network:26656,23a1176c9911eac442d6d1bf15f92eeabb3981d5@seed1.testedge2.haqq.network:26656"
+peers="b3ce1618585a9012c42e9a78bf4a5c1b4bad1123@65.21.170.3:33656,952b9d918037bc8f6d52756c111d0a30a456b3fe@213.239.217.52:29656,85301989752fe0ca934854aecc6379c1ccddf937@65.109.49.111:26556,d648d598c34e0e58ec759aa399fe4534021e8401@109.205.180.81:29956,f2c77f2169b753f93078de2b6b86bfa1ec4a6282@141.95.124.150:20116,eaa6d38517bbc32bdc487e894b6be9477fb9298f@78.107.234.44:45656,37513faac5f48bd043a1be122096c1ea1c973854@65.108.52.192:36656,d2764c55607aa9e8d4cee6e763d3d14e73b83168@66.94.119.47:26656,fc4311f0109d5aed5fcb8656fb6eab29c15d1cf6@65.109.53.53:26656,297bf784ea674e05d36af48e3a951de966f9aa40@65.109.34.133:36656,bc8c24e9d231faf55d4c6c8992a8b187cdd5c214@65.109.17.86:32656"
+sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.haqqd/config/config.toml
 ```
 
-**Create gentx**
+Run the service file and see the logs of your node
 ```bash
-haqqd gentx YOURWALLETNAME 10000000000000000000aISLM \
---chain-id=haqq_54211-2 \
---moniker="YOURMONIKERNAME" \
---commission-max-change-rate 0.05 \
---commission-max-rate 0.20 \
---commission-rate 0.05 \
---website="" \
---security-contact="" \
---identity="" \
---details=""
+sudo systemctl restart haqqd && \
+sudo journalctl -u haqqd -f -o cat
 ```
-
-After executing this command, you have a gentx. Submit a pull request (gentx folder) with the given gentx
-```bash
-File Genesis transaction written to "/.haqqd/config/gentx/gentx-xxx.json"
-```
-
-Be sure to save your priv_validator_key.json
-```bash
-/.haqqd/config/priv_validator_key.json
-```
-
-
-
-
-
