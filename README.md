@@ -24,6 +24,11 @@ sha256sum: b93f2650bdf560cab2cf7706ecee72bfba6d947fa57f8b1b8cb887f8b428233f
 [statesync]
 enable = false
 ```
+<b>Make sure that pruning is set to "nothing" in $HOME/.haqqd/config/app.toml.</b></br>
+<b>Otherwise change it with the following command</b>
+```bash
+sed -i -e "s/^pruning *=.*/pruning = \"nothing\"/" $HOME/.haqqd/config/app.toml
+```
 
 Execute unsafe-reset-all
 ```bash
